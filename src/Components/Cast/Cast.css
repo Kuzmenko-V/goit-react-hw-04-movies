@@ -1,0 +1,28 @@
+.castItems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: auto;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.castItem {
+  margin: 10px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.castItem span {
+  margin: 0px;
+}
+.castItemNoImg {
+  width: 100%;
+}
+
+.castItemImg {
+  width: 50%;
+}

@@ -1,0 +1,21 @@
+.MovieDetailsPage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: auto;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.MoviePoster img {
+  width: 400px;
+}
+
+.MovieInfo {
+  width: 700px;
+}
+.MovieInfo p,
+span {
+  margin-left: 20px;
+}

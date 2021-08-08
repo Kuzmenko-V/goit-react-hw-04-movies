@@ -1,0 +1,16 @@
+.Navigation {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.navLink {
+  text-decoration: none;
+  color: darkblue;
+  font-size: large;
+  font-weight: 600;
+  margin: 20px;
+}
+.navLinkActive {
+  color: cornflowerblue;
+}

@@ -1,6 +1,6 @@
 import './App.css';
 import { lazy, Suspense } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route,Redirect } from 'react-router-dom';
 import Navigation from './Components/Navigation';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -37,8 +37,9 @@ export default function App() {
           </Route>
           <Route path='/movies'>
             <MoviesPage/>
-          </Route>
-          </Switch>
+            </Route>
+          <Redirect to="/" />
+        </Switch>          
       </Suspense>
       </main>
     </div>

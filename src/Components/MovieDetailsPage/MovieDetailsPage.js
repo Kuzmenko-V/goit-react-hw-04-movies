@@ -2,7 +2,7 @@ import API from '../../APIservice';
 import './MovieDetailsPage.css';
 import { Switch, Route } from 'react-router-dom';
 import { useState, useEffect, lazy, Suspense  } from 'react';
-import { Link, useRouteMatch } from "react-router-dom";
+import { Link, useRouteMatch ,useHistory, useLocation} from "react-router-dom";
 import { useParams } from 'react-router-dom';
 import noIMG from '../No-Image-Placeholder.svg';
 // import Cast from '../Cast';
@@ -13,6 +13,8 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 const Cast = lazy(() => import('../Cast/Cast.js'));
 const Reviews = lazy(() => import('../Reviews/Reviews.js'));
 export default function MovieDetailsPage() {
+    const history = useHistory();
+    const location = useLocation();
     const { movieId } = useParams();
     const [movie, setMovie] = useState(null);
     const { url } = useRouteMatch();
@@ -24,9 +26,12 @@ export default function MovieDetailsPage() {
             })
     
     }, [movieId]);
-
+    const onGoBack = () => {
+        history.push(location?.state?.from ?? '/')
+     };
     return (
-        <div>
+        <div className="Contein">
+            <button type="button" onClick={onGoBack}>Назад</button>
             {movie && (
                 movie.id ? (<div className="MovieDetailsPage">
                     <div className="MoviePoster">

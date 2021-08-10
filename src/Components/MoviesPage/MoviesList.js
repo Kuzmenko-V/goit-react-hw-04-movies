@@ -70,10 +70,17 @@ export default function MoviesList({searchText}) {
                 <ul>
                     {serchMovie && serchMovie.map(e => e.title ? (
                         <li key={e.id}>
-                            <Link to={`${url}/${e.id}`}>{e.title}</Link>
+                            <Link to={{
+                                pathname: `${url}/${e.id}`,
+                                state: { from: location}
+                            }}>{e.title}
+                            </Link>
                         </li>) : (
                         <li key={e.id}>
-                            <Link to={`${url}/${e.id}`}>{e.name}</Link>
+                            <Link to={{
+                                pathname: `${url}/${e.id}`,
+                                state: { from: location}
+                            }}>{e.name}</Link>
                         </li>)
                     )}
                 </ul>

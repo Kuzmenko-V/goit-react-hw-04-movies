@@ -19,3 +19,7 @@
 span {
   margin-left: 20px;
 }
+.Contein {
+  margin: auto;
+  max-width: 1400px;
+}
